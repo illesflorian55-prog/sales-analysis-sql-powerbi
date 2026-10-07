@@ -1,0 +1,251 @@
+customer_id,customer_name,segment,region,payment_terms_days,customer_since
+C0001,Kőrös Logisztika Kft.,KKV,Pest,30,2022-06-09
+C0002,Rábamenti Szakképzési Centrum,Közszféra,Észak-Magyarország,30,2023-02-20
+C0003,Rába Mérnöki Kft.,KKV,Dél-Alföld,30,2024-12-15
+C0004,Kőrös Logisztika Kft. (2),KKV,Közép-Dunántúl,30,2024-06-26
+C0005,Duna Oktatási Bt.,KKV,Pest,30,2025-03-09
+C0006,Pannon Logisztika Bt.,KKV,Közép-Dunántúl,30,2022-08-31
+C0007,Balaton Ipari Bt.,KKV,Dél-Alföld,30,2019-05-18
+C0008,Hegyalja Kereskedelmi Kft.,KKV,Budapest,30,2021-10-13
+C0009,Zemplén Agrár Bt.,KKV,Észak-Alföld,30,2022-10-14
+C0010,Drávamenti Vízmű,Közszféra,Pest,30,2024-07-03
+C0011,Dráva Logisztika Zrt.,Nagyvállalat,Budapest,45,2025-05-14
+C0012,Kárpát Kereskedelmi Bt.,KKV,Észak-Magyarország,30,2019-03-09
+C0013,Tisza Mérnöki Zrt.,Nagyvállalat,Dél-Dunántúl,45,2021-04-27
+C0014,Kárpát Logisztika Bt.,KKV,Nyugat-Dunántúl,30,2021-10-03
+C0015,Sajó Informatika Zrt.,Nagyvállalat,Pest,45,2023-11-22
+C0016,Dráva Informatika Bt.,KKV,Budapest,30,2021-02-20
+C0017,Sajó Mérnöki Bt.,KKV,Észak-Magyarország,30,2021-01-22
+C0018,Tisza Logisztika Bt.,KKV,Budapest,30,2025-03-21
+C0019,Sajó Építő Kft.,KKV,Közép-Dunántúl,30,2024-11-13
+C0020,Hegyalja Mérnöki Kft.,KKV,Budapest,30,2023-09-24
+C0021,Tisza Ipari Zrt.,Nagyvállalat,Dél-Alföld,45,2025-08-04
+C0022,Rába Informatika Kft.,KKV,Dél-Alföld,30,2022-07-14
+C0023,Kőrös Építő Kft.,KKV,Budapest,30,2021-03-31
+C0024,Alföld Kereskedelmi Bt.,KKV,Nyugat-Dunántúl,30,2025-07-02
+C0025,Zemplén Építő Kft.,KKV,Pest,30,2021-11-17
+C0026,Dráva Logisztika Zrt. (2),Nagyvállalat,Pest,45,2019-12-05
+C0027,Mátra Építő Zrt.,Nagyvállalat,Budapest,45,2021-11-23
+C0028,Pannonmenti Kórház,Közszféra,Nyugat-Dunántúl,30,2020-06-14
+C0029,Dunamenti Kórház,Közszféra,Közép-Dunántúl,30,2022-11-09
+C0030,Sajó Építő Kft. (2),KKV,Közép-Dunántúl,30,2021-10-26
+C0031,Kárpát Egészségügyi Bt.,KKV,Pest,30,2021-03-01
+C0032,Kárpátmenti Önkormányzat,Közszféra,Észak-Alföld,30,2020-07-22
+C0033,Bükk Mérnöki Kft.,KKV,Budapest,30,2025-08-23
+C0034,Rába Oktatási Zrt.,Nagyvállalat,Dél-Alföld,45,2020-02-19
+C0035,Dráva Kereskedelmi Kft.,KKV,Pest,30,2022-12-25
+C0036,Zemplénmenti Iskola,Közszféra,Budapest,30,2023-11-20
+C0037,Mátra Kereskedelmi Bt.,KKV,Budapest,30,2024-04-06
+C0038,Bükk Egészségügyi Bt.,KKV,Észak-Alföld,30,2021-04-25
+C0039,Balaton Ipari Kft.,KKV,Dél-Dunántúl,30,2022-08-18
+C0040,Sajó Informatika Bt.,KKV,Dél-Alföld,30,2019-05-02
+C0041,Balaton Szolgáltató Bt.,KKV,Budapest,30,2024-01-29
+C0042,Mátra Oktatási Kft.,KKV,Észak-Magyarország,30,2021-02-19
+C0043,Alföld Informatika Zrt.,Nagyvállalat,Budapest,45,2024-03-25
+C0044,Kőrös Mérnöki Zrt.,Nagyvállalat,Közép-Dunántúl,45,2021-01-20
+C0045,Alföldmenti Önkormányzat,Közszféra,Dél-Dunántúl,30,2022-08-23
+C0046,Tisza Ipari Zrt. (2),Nagyvállalat,Dél-Alföld,45,2019-08-26
+C0047,Kárpát Informatika Kft.,KKV,Dél-Alföld,30,2024-11-15
+C0048,Dráva Építő Kft.,KKV,Nyugat-Dunántúl,30,2022-09-09
+C0049,Balatonmenti Kormányhivatal,Közszféra,Nyugat-Dunántúl,30,2025-08-20
+C0050,Duna Mérnöki Bt.,KKV,Észak-Magyarország,30,2024-03-10
+C0051,Kárpát Agrár Kft.,KKV,Budapest,30,2025-01-22
+C0052,Balaton Oktatási Kft.,KKV,Pest,30,2024-09-29
+C0053,Kárpátmenti Kormányhivatal,Közszféra,Pest,30,2023-11-26
+C0054,Rábamenti Vízmű,Közszféra,Budapest,30,2019-04-30
+C0055,Mátra Ipari Zrt.,Nagyvállalat,Észak-Alföld,45,2023-07-06
+C0056,Zemplén Építő Bt.,KKV,Budapest,30,2021-08-30
+C0057,Duna Egészségügyi Zrt.,Nagyvállalat,Budapest,45,2019-04-07
+C0058,Mátra Oktatási Bt.,KKV,Pest,30,2024-11-18
+C0059,Pannonmenti Kormányhivatal,Közszféra,Budapest,30,2020-02-15
+C0060,Bükk Logisztika Kft.,KKV,Pest,30,2023-07-25
+C0061,Kárpát Építő Zrt.,Nagyvállalat,Észak-Alföld,45,2024-02-03
+C0062,Dráva Oktatási Zrt.,Nagyvállalat,Észak-Alföld,45,2024-07-24
+C0063,Zemplén Agrár Bt. (2),KKV,Nyugat-Dunántúl,30,2023-01-26
+C0064,Dráva Kereskedelmi Bt.,KKV,Észak-Alföld,30,2022-05-20
+C0065,Pannon Kereskedelmi Bt.,KKV,Budapest,30,2021-12-23
+C0066,Rába Ipari Kft.,KKV,Pest,30,2019-11-26
+C0067,Hegyalja Oktatási Bt.,KKV,Dél-Alföld,30,2022-10-18
+C0068,Pannon Mérnöki Kft.,KKV,Észak-Alföld,30,2024-12-19
+C0069,Alföld Agrár Bt.,KKV,Budapest,30,2021-12-11
+C0070,Hegyaljamenti Vízmű,Közszféra,Budapest,30,2022-01-10
+C0071,Sajó Agrár Bt.,KKV,Budapest,30,2024-03-28
+C0072,Pannonmenti Szakképzési Centrum,Közszféra,Nyugat-Dunántúl,30,2025-08-19
+C0073,Duna Logisztika Bt.,KKV,Nyugat-Dunántúl,30,2019-10-29
+C0074,Pannon Kereskedelmi Kft.,KKV,Nyugat-Dunántúl,30,2022-08-02
+C0075,Bükk Szolgáltató Bt.,KKV,Közép-Dunántúl,30,2025-06-24
+C0076,Tisza Kereskedelmi Zrt.,Nagyvállalat,Budapest,45,2022-03-30
+C0077,Mátra Agrár Bt.,KKV,Dél-Dunántúl,30,2025-07-28
+C0078,Mátra Ipari Bt.,KKV,Pest,30,2019-10-11
+C0079,Rábamenti Kórház,Közszféra,Pest,30,2024-04-22
+C0080,Kárpátmenti Iskola,Közszféra,Észak-Magyarország,30,2021-05-12
+C0081,Drávamenti Vízmű (2),Közszféra,Dél-Dunántúl,30,2020-05-02
+C0082,Pannon Szolgáltató Bt.,KKV,Budapest,30,2024-12-14
+C0083,Pannon Informatika Kft.,KKV,Észak-Alföld,30,2020-07-21
+C0084,Rába Agrár Kft.,KKV,Dél-Alföld,30,2020-12-04
+C0085,Sajómenti Szakképzési Centrum,Közszféra,Budapest,30,2023-02-15
+C0086,Tiszamenti Iskola,Közszféra,Dél-Dunántúl,30,2022-05-10
+C0087,Kőrös Kereskedelmi Zrt.,Nagyvállalat,Budapest,45,2024-04-01
+C0088,Hegyalja Oktatási Kft.,KKV,Dél-Alföld,30,2019-03-07
+C0089,Sajó Egészségügyi Zrt.,Nagyvállalat,Nyugat-Dunántúl,45,2020-06-02
+C0090,Dráva Oktatási Zrt. (2),Nagyvállalat,Észak-Alföld,45,2025-08-16
+C0091,Duna Kereskedelmi Kft.,KKV,Észak-Alföld,30,2019-12-30
+C0092,Zemplén Logisztika Bt.,KKV,Észak-Magyarország,30,2023-03-13
+C0093,Bükk Logisztika Kft. (2),KKV,Budapest,30,2025-03-30
+C0094,Zemplén Logisztika Kft.,KKV,Budapest,30,2024-01-28
+C0095,Tisza Agrár Kft.,KKV,Budapest,30,2024-04-27
+C0096,Zemplén Egészségügyi Kft.,KKV,Észak-Magyarország,30,2021-10-27
+C0097,Balatonmenti Iskola,Közszféra,Budapest,30,2024-06-13
+C0098,Hegyaljamenti Kórház,Közszféra,Budapest,30,2021-07-04
+C0099,Tisza Oktatási Bt.,KKV,Budapest,30,2020-05-15
+C0100,Zemplén Oktatási Kft.,KKV,Nyugat-Dunántúl,30,2021-01-11
+C0101,Mátra Oktatási Bt. (2),KKV,Nyugat-Dunántúl,30,2019-03-06
+C0102,Zemplén Ipari Kft.,KKV,Budapest,30,2024-12-28
+C0103,Mátra Informatika Bt.,KKV,Dél-Dunántúl,30,2022-11-18
+C0104,Balaton Oktatási Bt.,KKV,Nyugat-Dunántúl,30,2024-11-24
+C0105,Drávamenti Iskola,Közszféra,Dél-Alföld,30,2020-04-28
+C0106,Balaton Kereskedelmi Bt.,KKV,Észak-Alföld,30,2019-04-11
+C0107,Tiszamenti Önkormányzat,Közszféra,Budapest,30,2020-05-20
+C0108,Rába Oktatási Kft.,KKV,Budapest,30,2024-01-10
+C0109,Hegyaljamenti Önkormányzat,Közszféra,Pest,30,2022-04-18
+C0110,Tisza Oktatási Kft.,KKV,Dél-Alföld,30,2024-09-28
+C0111,Rába Ipari Kft. (2),KKV,Dél-Dunántúl,30,2020-08-23
+C0112,Pannon Építő Kft.,KKV,Közép-Dunántúl,30,2021-01-21
+C0113,Drávamenti Kormányhivatal,Közszféra,Közép-Dunántúl,30,2025-06-21
+C0114,Dráva Ipari Zrt.,Nagyvállalat,Pest,45,2023-02-12
+C0115,Kőrös Építő Bt.,KKV,Közép-Dunántúl,30,2020-03-15
+C0116,Kőrös Építő Zrt.,Nagyvállalat,Budapest,45,2020-06-09
+C0117,Tisza Informatika Kft.,KKV,Közép-Dunántúl,30,2024-06-04
+C0118,Hegyalja Agrár Kft.,KKV,Nyugat-Dunántúl,30,2022-10-05
+C0119,Mátra Oktatási Bt. (3),KKV,Közép-Dunántúl,30,2023-03-01
+C0120,Kárpát Kereskedelmi Kft.,KKV,Észak-Alföld,30,2023-06-26
+C0121,Zemplénmenti Kórház,Közszféra,Pest,30,2021-07-19
+C0122,Zemplén Mérnöki Kft.,KKV,Dél-Alföld,30,2019-01-16
+C0123,Zemplén Oktatási Kft. (2),KKV,Budapest,30,2021-01-26
+C0124,Balaton Informatika Kft.,KKV,Budapest,30,2024-12-02
+C0125,Zemplénmenti Vízmű,Közszféra,Nyugat-Dunántúl,30,2024-11-01
+C0126,Bükkmenti Vízmű,Közszféra,Észak-Magyarország,30,2024-10-21
+C0127,Kőrös Egészségügyi Zrt.,Nagyvállalat,Észak-Magyarország,45,2021-03-03
+C0128,Sajó Építő Kft. (3),KKV,Dél-Alföld,30,2024-07-03
+C0129,Tisza Informatika Kft. (2),KKV,Pest,30,2024-01-27
+C0130,Pannon Ipari Bt.,KKV,Dél-Alföld,30,2023-10-27
+C0131,Kárpát Szolgáltató Kft.,KKV,Budapest,30,2025-05-28
+C0132,Dunamenti Kórház (2),Közszféra,Budapest,30,2020-10-26
+C0133,Hegyalja Agrár Kft. (2),KKV,Dél-Dunántúl,30,2025-04-18
+C0134,Rábamenti Vízmű (2),Közszféra,Budapest,30,2020-02-27
+C0135,Sajómenti Iskola,Közszféra,Budapest,30,2024-12-05
+C0136,Zemplén Mérnöki Kft. (2),KKV,Észak-Alföld,30,2021-01-17
+C0137,Kőrös Informatika Bt.,KKV,Észak-Alföld,30,2021-03-19
+C0138,Kőrös Építő Kft. (2),KKV,Észak-Alföld,30,2022-04-30
+C0139,Kárpát Oktatási Kft.,KKV,Észak-Alföld,30,2022-10-27
+C0140,Balaton Építő Zrt.,Nagyvállalat,Nyugat-Dunántúl,45,2025-09-30
+C0141,Kőrös Informatika Kft.,KKV,Pest,30,2021-06-13
+C0142,Alföld Szolgáltató Kft.,KKV,Budapest,30,2019-02-01
+C0143,Balaton Egészségügyi Kft.,KKV,Pest,30,2025-09-05
+C0144,Kőrös Ipari Kft.,KKV,Budapest,30,2020-02-28
+C0145,Sajómenti Szakképzési Centrum (2),Közszféra,Közép-Dunántúl,30,2022-01-20
+C0146,Mátra Ipari Bt. (2),KKV,Budapest,30,2020-09-16
+C0147,Bükk Agrár Bt.,KKV,Nyugat-Dunántúl,30,2025-02-10
+C0148,Zemplén Mérnöki Kft. (3),KKV,Dél-Alföld,30,2025-03-05
+C0149,Alföld Szolgáltató Bt.,KKV,Budapest,30,2021-02-07
+C0150,Hegyaljamenti Vízmű (2),Közszféra,Közép-Dunántúl,30,2021-02-18
+C0151,Mátramenti Önkormányzat,Közszféra,Budapest,30,2021-10-26
+C0152,Dráva Ipari Kft.,KKV,Közép-Dunántúl,30,2023-03-14
+C0153,Kőrös Mérnöki Kft.,KKV,Budapest,30,2023-10-25
+C0154,Alföld Logisztika Kft.,KKV,Pest,30,2021-01-16
+C0155,Kőrös Informatika Zrt.,Nagyvállalat,Közép-Dunántúl,45,2021-05-31
+C0156,Dráva Szolgáltató Kft.,KKV,Észak-Magyarország,30,2020-04-13
+C0157,Hegyalja Ipari Bt.,KKV,Közép-Dunántúl,30,2020-02-15
+C0158,Pannonmenti Kórház (2),Közszféra,Budapest,30,2024-05-02
+C0159,Alföld Logisztika Zrt.,Nagyvállalat,Budapest,45,2023-07-12
+C0160,Tisza Agrár Kft. (2),KKV,Budapest,30,2022-01-21
+C0161,Dráva Kereskedelmi Bt. (2),KKV,Nyugat-Dunántúl,30,2024-01-04
+C0162,Rába Oktatási Bt.,KKV,Budapest,30,2023-03-20
+C0163,Sajómenti Iskola (2),Közszféra,Pest,30,2024-02-20
+C0164,Balatonmenti Iskola (2),Közszféra,Budapest,30,2022-12-09
+C0165,Mátra Egészségügyi Bt.,KKV,Pest,30,2019-05-21
+C0166,Alföld Mérnöki Bt.,KKV,Budapest,30,2025-04-09
+C0167,Kőrös Építő Kft. (3),KKV,Budapest,30,2021-12-04
+C0168,Duna Építő Zrt.,Nagyvállalat,Dél-Dunántúl,45,2019-08-07
+C0169,Sajó Szolgáltató Zrt.,Nagyvállalat,Budapest,45,2023-11-23
+C0170,Tisza Egészségügyi Zrt.,Nagyvállalat,Észak-Alföld,45,2019-10-25
+C0171,Pannon Szolgáltató Bt. (2),KKV,Budapest,30,2020-09-10
+C0172,Hegyaljamenti Önkormányzat (2),Közszféra,Budapest,30,2021-12-08
+C0173,Zemplénmenti Iskola (2),Közszféra,Budapest,30,2021-08-03
+C0174,Rába Szolgáltató Kft.,KKV,Észak-Magyarország,30,2025-04-04
+C0175,Sajó Logisztika Bt.,KKV,Közép-Dunántúl,30,2024-08-17
+C0176,Rába Egészségügyi Bt.,KKV,Budapest,30,2019-10-16
+C0177,Hegyalja Informatika Zrt.,Nagyvállalat,Dél-Alföld,45,2019-11-18
+C0178,Bükkmenti Kormányhivatal,Közszféra,Dél-Alföld,30,2023-05-03
+C0179,Rábamenti Kórház (2),Közszféra,Pest,30,2024-11-26
+C0180,Kárpát Kereskedelmi Bt. (2),KKV,Észak-Magyarország,30,2024-03-07
+C0181,Kárpátmenti Önkormányzat (2),Közszféra,Észak-Magyarország,30,2021-02-14
+C0182,Rába Oktatási Zrt. (2),Nagyvállalat,Dél-Alföld,45,2024-08-29
+C0183,Zemplénmenti Kormányhivatal,Közszféra,Pest,30,2021-10-25
+C0184,Zemplén Oktatási Bt.,KKV,Nyugat-Dunántúl,30,2019-05-02
+C0185,Rába Építő Kft.,KKV,Pest,30,2020-07-08
+C0186,Rába Informatika Bt.,KKV,Dél-Alföld,30,2021-05-01
+C0187,Rábamenti Kórház (3),Közszféra,Budapest,30,2019-12-30
+C0188,Bükk Építő Kft.,KKV,Közép-Dunántúl,30,2019-03-23
+C0189,Hegyaljamenti Kórház (2),Közszféra,Dél-Dunántúl,30,2020-02-26
+C0190,Mátra Egészségügyi Kft.,KKV,Észak-Magyarország,30,2024-03-08
+C0191,Sajómenti Iskola (3),Közszféra,Dél-Alföld,30,2019-05-10
+C0192,Tisza Egészségügyi Kft.,KKV,Közép-Dunántúl,30,2023-03-03
+C0193,Bükk Kereskedelmi Kft.,KKV,Budapest,30,2024-04-12
+C0194,Mátra Egészségügyi Bt. (2),KKV,Észak-Magyarország,30,2020-10-30
+C0195,Alföld Mérnöki Kft.,KKV,Észak-Magyarország,30,2023-08-22
+C0196,Balatonmenti Kormányhivatal (2),Közszféra,Budapest,30,2025-01-30
+C0197,Alföld Informatika Kft.,KKV,Pest,30,2024-03-26
+C0198,Drávamenti Iskola (2),Közszféra,Pest,30,2021-08-13
+C0199,Sajó Logisztika Kft.,KKV,Budapest,30,2025-07-22
+C0200,Kárpát Ipari Kft.,KKV,Közép-Dunántúl,30,2021-08-23
+C0201,Alföld Oktatási Zrt.,Nagyvállalat,Budapest,45,2023-02-10
+C0202,Sajó Informatika Bt. (2),KKV,Közép-Dunántúl,30,2023-04-23
+C0203,Duna Logisztika Zrt.,Nagyvállalat,Dél-Alföld,45,2020-08-01
+C0204,Kárpát Mérnöki Bt.,KKV,Pest,30,2024-04-29
+C0205,Balatonmenti Kórház,Közszféra,Észak-Magyarország,30,2023-01-31
+C0206,Sajó Ipari Bt.,KKV,Budapest,30,2025-02-24
+C0207,Dráva Informatika Bt. (2),KKV,Észak-Magyarország,30,2024-12-05
+C0208,Kárpát Oktatási Kft. (2),KKV,Budapest,30,2023-04-30
+C0209,Pannon Építő Kft. (2),KKV,Budapest,30,2021-06-13
+C0210,Balatonmenti Kórház (2),Közszféra,Budapest,30,2022-07-31
+C0211,Pannon Mérnöki Kft. (2),KKV,Nyugat-Dunántúl,30,2023-09-07
+C0212,Dráva Szolgáltató Bt.,KKV,Dél-Dunántúl,30,2019-03-14
+C0213,Bükkmenti Vízmű (2),Közszféra,Észak-Magyarország,30,2022-09-13
+C0214,Rába Ipari Bt.,KKV,Dél-Alföld,30,2024-09-09
+C0215,Zemplén Szolgáltató Kft.,KKV,Dél-Dunántúl,30,2024-07-30
+C0216,Hegyalja Kereskedelmi Kft. (2),KKV,Pest,30,2020-04-10
+C0217,Tisza Építő Zrt.,Nagyvállalat,Dél-Dunántúl,45,2025-02-23
+C0218,Dráva Építő Zrt.,Nagyvállalat,Pest,45,2025-08-24
+C0219,Alföld Építő Bt.,KKV,Dél-Dunántúl,30,2022-10-10
+C0220,Kőrös Oktatási Kft.,KKV,Dél-Dunántúl,30,2023-09-26
+C0221,Zemplén Mérnöki Bt.,KKV,Dél-Alföld,30,2020-07-07
+C0222,Kárpát Ipari Bt.,KKV,Dél-Alföld,30,2024-12-14
+C0223,Sajó Mérnöki Kft.,KKV,Észak-Alföld,30,2019-11-14
+C0224,Sajómenti Vízmű,Közszféra,Pest,30,2021-09-07
+C0225,Bükk Kereskedelmi Bt.,KKV,Pest,30,2025-08-07
+C0226,Dunamenti Szakképzési Centrum,Közszféra,Dél-Alföld,30,2024-05-29
+C0227,Hegyalja Informatika Bt.,KKV,Pest,30,2022-02-14
+C0228,Balaton Kereskedelmi Kft.,KKV,Nyugat-Dunántúl,30,2022-03-29
+C0229,Drávamenti Kórház,Közszféra,Budapest,30,2019-01-14
+C0230,Tisza Mérnöki Kft.,KKV,Észak-Alföld,30,2022-10-25
+C0231,Alföld Oktatási Kft.,KKV,Dél-Alföld,30,2019-10-05
+C0232,Sajó Mérnöki Kft. (2),KKV,Dél-Alföld,30,2019-05-06
+C0233,Kőrös Informatika Kft. (2),KKV,Budapest,30,2022-04-09
+C0234,Alföldmenti Kórház,Közszféra,Budapest,30,2020-03-14
+C0235,Duna Oktatási Bt. (2),KKV,Dél-Dunántúl,30,2024-01-21
+C0236,Kárpát Építő Zrt. (2),Nagyvállalat,Észak-Magyarország,45,2023-10-24
+C0237,Duna Ipari Kft.,KKV,Pest,30,2022-04-25
+C0238,Dráva Oktatási Bt.,KKV,Észak-Alföld,30,2021-01-19
+C0239,Pannon Informatika Kft. (2),KKV,Észak-Alföld,30,2023-05-27
+C0240,Mátramenti Önkormányzat (2),Közszféra,Budapest,30,2020-05-20
+C0241,Duna Logisztika Zrt. (2),Nagyvállalat,Budapest,45,2024-10-06
+C0242,Rába Egészségügyi Zrt.,Nagyvállalat,Dél-Dunántúl,45,2019-02-17
+C0243,Alföldmenti Iskola,Közszféra,Észak-Alföld,30,2024-12-10
+C0244,Kárpát Agrár Zrt.,Nagyvállalat,Pest,45,2020-08-12
+C0245,Rába Kereskedelmi Bt.,KKV,Észak-Magyarország,30,2021-01-10
+C0246,Sajó Építő Kft. (4),KKV,Észak-Magyarország,30,2020-08-30
+C0247,Duna Ipari Kft. (2),KKV,Észak-Alföld,30,2025-06-30
+C0248,Kőrös Ipari Kft. (2),KKV,Pest,30,2025-09-01
+C0249,Sajómenti Iskola (4),Közszféra,Budapest,30,2024-05-21
+C0250,Kárpát Agrár Kft. (2),KKV,Észak-Magyarország,30,2024-12-18

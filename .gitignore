@@ -1,0 +1,15 @@
+# A futtatáskor újragenerált adatbázis
+data/sales.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Power BI ideiglenes fájlok
+*.pbix.bak
+
+# Rendszerfájlok
+.DS_Store
+Thumbs.db

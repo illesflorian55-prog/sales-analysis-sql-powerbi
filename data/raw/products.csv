@@ -1,0 +1,61 @@
+product_id,product_name,category,unit_price,unit_cost
+P001,Másolópapír A4 80g (500 lap),Papír és irodaszer,5620.0,3940.0
+P002,Másolópapír A3 80g (500 lap),Papír és irodaszer,2120.0,1560.0
+P003,Spirálfüzet A4 kockás,Papír és irodaszer,1060.0,730.0
+P004,Iratrendező 75 mm,Papír és irodaszer,1600.0,1090.0
+P005,Genotherm A4 (100 db),Papír és irodaszer,1220.0,880.0
+P006,Golyóstoll kék (50 db),Papír és irodaszer,2670.0,1770.0
+P007,Szövegkiemelő készlet,Papír és irodaszer,3020.0,2250.0
+P008,Tűzőgép 24/6,Papír és irodaszer,3670.0,2640.0
+P009,Tűzőkapocs 24/6 (1000 db),Papír és irodaszer,3320.0,2260.0
+P010,Post-it jegyzettömb (12 db),Papír és irodaszer,1350.0,940.0
+P011,Boríték LC/5 (1000 db),Papír és irodaszer,2950.0,1920.0
+P012,Irattartó papucs,Papír és irodaszer,2350.0,1420.0
+P013,Ragasztóroller,Papír és irodaszer,3930.0,2720.0
+P014,Iratmegsemmisítő-papír tasak,Papír és irodaszer,3500.0,2040.0
+P015,Lézertoner fekete (standard),Nyomtatás és toner,43490.0,35720.0
+P016,Lézertoner fekete (nagy kapacitású),Nyomtatás és toner,11860.0,8130.0
+P017,Színes toner készlet (CMY),Nyomtatás és toner,11180.0,9240.0
+P018,Tintapatron fekete,Nyomtatás és toner,14460.0,10690.0
+P019,Tintapatron színes,Nyomtatás és toner,17190.0,13620.0
+P020,Dobegység,Nyomtatás és toner,13290.0,10570.0
+P021,Címkenyomtató szalag,Nyomtatás és toner,12120.0,7830.0
+P022,Fotópapír A4 (50 lap),Nyomtatás és toner,20580.0,14730.0
+P023,Nyomtató-karbantartó készlet,Nyomtatás és toner,14440.0,11110.0
+P024,Lézertoner felújított,Nyomtatás és toner,13060.0,11660.0
+P025,Vezeték nélküli egér,IT-kiegészítők,6450.0,5610.0
+P026,Vezeték nélküli billentyűzet,IT-kiegészítők,4360.0,3660.0
+P027,USB-C dokkoló,IT-kiegészítők,21780.0,17040.0
+P028,"Monitor 24""",IT-kiegészítők,21450.0,16290.0
+P029,Webkamera Full HD,IT-kiegészítők,17070.0,14080.0
+P030,Headset zajszűrős,IT-kiegészítők,15190.0,11290.0
+P031,USB pendrive 64 GB,IT-kiegészítők,9260.0,6960.0
+P032,Külső SSD 1 TB,IT-kiegészítők,15480.0,12500.0
+P033,HDMI kábel 2 m,IT-kiegészítők,7240.0,6080.0
+P034,"Laptoptáska 15,6""",IT-kiegészítők,12480.0,9530.0
+P035,Elosztó túlfeszültség-védelemmel,IT-kiegészítők,8400.0,6540.0
+P036,Monitorkar dupla,IT-kiegészítők,15510.0,11620.0
+P037,Ergonomikus irodaszék,Irodabútor,130680.0,83130.0
+P038,Állítható magasságú íróasztal,Irodabútor,41420.0,25510.0
+P039,Tárgyalóasztal,Irodabútor,51190.0,33160.0
+P040,Fémszekrény zárható,Irodabútor,67020.0,48300.0
+P041,Görgős konténer,Irodabútor,28820.0,20420.0
+P042,Tárgyalószék,Irodabútor,32220.0,21000.0
+P043,Polcos szekrény,Irodabútor,128630.0,95170.0
+P044,Lábtartó ergonomikus,Irodabútor,74460.0,54820.0
+P045,Kéztörlő papír (20 tekercs),Tisztítószer és higiénia,2640.0,1610.0
+P046,Toalettpapír (24 tekercs),Tisztítószer és higiénia,3440.0,1940.0
+P047,Folyékony szappan 5 l,Tisztítószer és higiénia,2820.0,1690.0
+P048,Kézfertőtlenítő 5 l,Tisztítószer és higiénia,3660.0,2230.0
+P049,Felülettisztító 5 l,Tisztítószer és higiénia,2860.0,1870.0
+P050,Szemeteszsák (50 db),Tisztítószer és higiénia,3320.0,2300.0
+P051,Mosogatószer 5 l,Tisztítószer és higiénia,4710.0,2910.0
+P052,Mikroszálas kendő (10 db),Tisztítószer és higiénia,4570.0,2620.0
+P053,Szemes kávé 1 kg,Kávé és konyha,10560.0,6530.0
+P054,Kávékapszula (100 db),Kávé és konyha,6510.0,4110.0
+P055,Tea válogatás (100 filter),Kávé és konyha,5560.0,3500.0
+P056,Cukor tasakos (1000 db),Kávé és konyha,11400.0,6630.0
+P057,Papírpohár (1000 db),Kávé és konyha,4990.0,2700.0
+P058,"Ásványvíz (24 x 0,5 l)",Kávé és konyha,2070.0,1450.0
+P059,Tejszín kávéhoz (120 db),Kávé és konyha,7870.0,4700.0
+P060,Vízforraló,Kávé és konyha,6160.0,4100.0
