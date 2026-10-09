@@ -2,7 +2,7 @@
 
 Egy fiktív irodaszer-nagykereskedő, a **Pannon Office Supply Kft.** két évnyi (2024–2025) értékesítési adatának elemzése: a vevői rendeléstől a kiszállításon és a számlázáson át a pénz beérkezéséig (order-to-cash). A projekt egy SAP SD-szerű értékesítési folyamatot modellez, és üzleti kérdésekre ad választ SQL-lel, a Power BI riport felépítését pedig külön útmutató írja le.
 
-> **English summary:** End-to-end sales analysis of a fictional Hungarian office-supply wholesaler (2024–2025) covering the full order-to-cash process: sales orders, deliveries, invoices and payments. A Python script generates a reproducible synthetic dataset, a SQLite database is built from a relational schema, and 9 SQL queries (CTEs, window functions such as `LAG`, `RANK`, `ROW_NUMBER` and running totals) answer business questions on revenue trends, customer ABC analysis, category margins, on-time delivery and payment behaviour. A Power BI guide documents the star schema and DAX measures.
+> **English summary:** End-to-end sales analysis of a fictional Hungarian office-supply wholesaler (2024–2025) covering the full order-to-cash process: sales orders, deliveries, invoices and payments. A Python script generates a reproducible synthetic dataset, a SQLite database is built from a relational schema, and 9 SQL queries (CTEs, window functions such as `LAG`, `RANK`, `ROW_NUMBER` and running totals) answer business questions on revenue trends, customer ABC analysis, category margins, on-time delivery and payment behaviour. A Power BI report (.pbix, loading data directly from this repository) visualises the KPIs with a star schema and DAX measures such as year-over-year growth and on-time delivery rate.
 
 ## Fő megállapítások
 
@@ -68,9 +68,13 @@ customers ──< sales_orders >── order_items >── products
 
 Az összes lekérdezés eredménye megtalálható a [`results/`](results) mappában CSV-ként.
 
-## Power BI
+## Power BI riport
 
-A [`powerbi/README.md`](powerbi/README.md) leírja a riport felépítését: a csillagsémát, a dátumtáblát, a DAX-mértékeket (pl. `Revenue YoY %`, `On-Time Delivery %`, `Late Payment %`) és a három riportoldalt.
+![Power BI riport](images/powerbi_report.png)
+
+A [`powerbi/sales_analysis_powerbi.pbix`](powerbi/sales_analysis_powerbi.pbix) riport közvetlenül ebből a repóból tölti be az adatokat, így Power BI Desktopban megnyitva azonnal frissíthető. Tartalma: KPI-kártyák, havi trend az előző évhez képest, kategória-, régió- és szegmenselemzés, évválasztó. A riport ugyanazokat a számokat adja, mint az SQL-elemzés.
+
+Az adatmodell, a Power Query-lépések és a DAX-mértékek (pl. `Revenue YoY %`, `On-Time Delivery %`, `Late Payment %`) leírása: [`powerbi/README.md`](powerbi/README.md).
 
 ## Futtatás
 
@@ -98,7 +102,7 @@ python src/make_charts.py      # diagramok -> images/
 │   └── make_charts.py     # diagramok a README-hez
 ├── results/               # a lekérdezések eredményei CSV-ben
 ├── images/                # diagramok
-└── powerbi/               # Power BI riport útmutató
+└── powerbi/               # Power BI riport (.pbix) és leírása
 ```
 
 ## Az adatokról

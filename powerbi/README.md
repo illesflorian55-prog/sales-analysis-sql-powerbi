@@ -1,140 +1,107 @@
-# Power BI riport – felépítési útmutató
+# Power BI riport
 
-Ez az útmutató leírja, hogyan épül fel a projekt Power BI riportja a `data/raw/` mappa CSV-fájljaiból: az adatmodell, a DAX-mértékek és a riportoldalak.
+A [`sales_analysis_powerbi.pbix`](sales_analysis_powerbi.pbix) Power BI Desktopban megnyitható riport. Az adatokat közvetlenül ebből a GitHub-repóból tölti be, így a **Frissítés** gombbal bárhol, külön letöltés nélkül újratölthető.
 
-## 1. Adatok betöltése
+![Power BI riport](../images/powerbi_report.png)
 
-**Kezdőlap → Adatok lekérése → Szöveg/CSV**, majd a `data/raw/` mappa hat fájlja:
+## A riport tartalma
 
-| Fájl | Tábla szerepe |
+Egy áttekintő oldal, évválasztóval (alapértelmezés: 2025):
+
+| Elem | Mit mutat |
 |---|---|
-| `customers.csv` | dimenzió – vevők |
-| `products.csv` | dimenzió – termékek |
-| `sales_orders.csv` | rendelésfej (a rendelés dátuma, csatorna, státusz) |
-| `order_items.csv` | **ténytábla** – rendelési tételek |
-| `deliveries.csv` | kiszállítások |
-| `invoices.csv` | számlák és kifizetések |
+| KPI-kártyák | Árbevétel, éves változás, árrés %, határidőre szállítás %, átlagos fizetési idő (nap) |
+| Vonaldiagram | Havi árbevétel a kiválasztott évben és az előző évben |
+| Sávdiagram | Árbevétel termékkategóriánként |
+| Sávdiagram | Határidőre szállítás aránya régiónként |
+| Oszlopdiagram | Késve fizetett számlák aránya vevőszegmensenként |
 
-A Power Queryben ellenőrizendő: a dátumoszlopok típusa *Dátum*, a `unit_price`, `unit_cost` és `discount_pct` típusa *Tizedes tört*. A területi beállítás legyen angol (Egyesült Államok), mert a CSV-k tizedespontot használnak.
+A diagramok szűrik egymást: egy kategóriára vagy szegmensre kattintva az egész oldal arra szűkül.
 
-## 2. Adatmodell (csillagséma)
+## 1. Adatbetöltés (Power Query)
 
+Mind a hat tábla a GitHub raw URL-jéről töltődik be. Példa a `customers` táblára:
+
+```m
+let
+    Source = Csv.Document(
+        Web.Contents("https://raw.githubusercontent.com/illesflorian55-prog/sales-analysis-sql-powerbi/main/data/raw/customers.csv"),
+        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+    Typed = Table.TransformColumnTypes(Promoted, {
+        {"customer_id", type text}, {"customer_name", type text}, {"segment", type text},
+        {"region", type text}, {"payment_terms_days", Int64.Type}, {"customer_since", type date}}, "en-US")
+in
+    Typed
 ```
-                 customers                  products
-                     │ 1                        │ 1
-                     │                          │
-                     ▼ *                        ▼ *
-  Date 1 ──► * sales_orders 1 ──► * order_items
-                     │ 1
-          ┌──────────┴──────────┐
-          ▼ 1                   ▼ 1
-      deliveries             invoices
-```
 
-Kapcsolatok (*Modellnézet*):
+Power Queryben számított oszlopok:
 
-| Innen (1) | Ide (*) | Kulcs |
+| Tábla | Oszlop | Képlet |
 |---|---|---|
-| `customers` | `sales_orders` | `customer_id` |
-| `products` | `order_items` | `product_id` |
-| `sales_orders` | `order_items` | `order_id` |
-| `sales_orders` | `deliveries` | `order_id` (1:1) |
-| `sales_orders` | `invoices` | `order_id` (1:1) |
-| `Date` | `sales_orders` | `Date[Date]` → `order_date` |
+| `order_items` | `net_revenue` | mennyiség × egységár × (1 − kedvezmény) |
+| `order_items` | `line_cost` | mennyiség × beszerzési ár |
+| `deliveries` | `on_time` | 1, ha a tényleges szállítás nem később, mint a tervezett |
+| `invoices` | `days_to_pay` | a számla és a kifizetés között eltelt napok |
+| `invoices` | `paid_late` | 1, ha a fizetés a határidő után történt |
 
-A `Date` dátumtábla DAX-szal (**Modellezés → Új tábla**), majd *Megjelölés dátumtáblaként*:
+A `invoices` táblában az üres `payment_date` értékek `null`-ra cserélődnek (nyitott számlák).
 
-```dax
-Date =
-ADDCOLUMNS (
-    CALENDAR ( DATE ( 2024, 1, 1 ), DATE ( 2025, 12, 31 ) ),
-    "Év", YEAR ( [Date] ),
-    "Hónap száma", MONTH ( [Date] ),
-    "Hónap", FORMAT ( [Date], "yyyy-mm" ),
-    "Negyedév", "Q" & QUARTER ( [Date] )
-)
+## 2. Adatmodell
+
+```
+customers 1 ──< * sales_orders 1 ──< * order_items >── * 1 products
+                       │ 1   ▲ *
+                       │     └── 1 Date
+            ┌──────────┴──────────┐
+         1 deliveries         1 invoices
 ```
 
-Az `order_items` táblába két számított oszlop kerül:
+| Innen (*) | Ide (1) | Kulcs |
+|---|---|---|
+| `sales_orders` | `customers` | `customer_id` |
+| `order_items` | `sales_orders` | `order_id` |
+| `order_items` | `products` | `product_id` |
+| `deliveries` | `sales_orders` | `order_id` (1:1) |
+| `invoices` | `sales_orders` | `order_id` (1:1) |
+| `sales_orders` | `Date` | `order_date` → `Date` |
+
+Dátumtábla (DAX):
 
 ```dax
-Net Revenue = order_items[quantity] * order_items[unit_price] * ( 1 - order_items[discount_pct] )
-Line Cost   = order_items[quantity] * order_items[unit_cost]
+Date = ADDCOLUMNS(
+    CALENDAR(DATE(2024, 1, 1), DATE(2025, 12, 31)),
+    "Year", YEAR([Date]),
+    "MonthNo", MONTH([Date]),
+    "Month", FORMAT([Date], "yyyy-mm"),
+    "Quarter", "Q" & QUARTER([Date])
+)
 ```
 
 ## 3. DAX-mértékek
 
-Egy külön `_Measures` táblába gyűjtve:
-
 ```dax
--- Árbevétel csak a teljesített rendelésekből
-Revenue =
-CALCULATE (
-    SUM ( order_items[Net Revenue] ),
-    sales_orders[status] = "Teljesített"
-)
+Revenue = CALCULATE(SUM(order_items[net_revenue]), sales_orders[status] = "Teljesített")
 
-Gross Margin =
-[Revenue]
-    - CALCULATE ( SUM ( order_items[Line Cost] ), sales_orders[status] = "Teljesített" )
+Gross Margin = [Revenue] - CALCULATE(SUM(order_items[line_cost]), sales_orders[status] = "Teljesített")
 
-Gross Margin % = DIVIDE ( [Gross Margin], [Revenue] )
+Gross Margin % = DIVIDE([Gross Margin], [Revenue])
 
-Orders =
-CALCULATE ( DISTINCTCOUNT ( sales_orders[order_id] ), sales_orders[status] = "Teljesített" )
+Orders = CALCULATE(DISTINCTCOUNT(sales_orders[order_id]), sales_orders[status] = "Teljesített")
 
-Average Order Value = DIVIDE ( [Revenue], [Orders] )
+Average Order Value = DIVIDE([Revenue], [Orders])
 
--- Előző év azonos időszaka és éves változás
-Revenue PY = CALCULATE ( [Revenue], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+Revenue PY = CALCULATE([Revenue], SAMEPERIODLASTYEAR('Date'[Date]))
 
-Revenue YoY % = DIVIDE ( [Revenue] - [Revenue PY], [Revenue PY] )
+Revenue YoY % = DIVIDE([Revenue] - [Revenue PY], [Revenue PY])
 
-Revenue YTD = TOTALYTD ( [Revenue], 'Date'[Date] )
+On-Time Delivery % = AVERAGE(deliveries[on_time])
 
--- Határidőre szállítás aránya (OTD)
-On-Time Delivery % =
-DIVIDE (
-    COUNTROWS ( FILTER ( deliveries, deliveries[delivery_date] <= deliveries[planned_date] ) ),
-    COUNTROWS ( deliveries )
-)
+Late Payment % = AVERAGE(invoices[paid_late])
 
--- Késve fizetett számlák aránya
-Late Payment % =
-DIVIDE (
-    COUNTROWS (
-        FILTER ( invoices, NOT ISBLANK ( invoices[payment_date] )
-                           && invoices[payment_date] > invoices[due_date] )
-    ),
-    COUNTROWS ( FILTER ( invoices, NOT ISBLANK ( invoices[payment_date] ) ) )
-)
-
--- Átlagos fizetési idő (számlától a kifizetésig, napokban)
-Avg Days to Pay =
-AVERAGEX (
-    FILTER ( invoices, NOT ISBLANK ( invoices[payment_date] ) ),
-    DATEDIFF ( invoices[invoice_date], invoices[payment_date], DAY )
-)
-
--- Nyitott (ki nem fizetett) számlák darabszáma
-Open Invoices = COUNTROWS ( FILTER ( invoices, ISBLANK ( invoices[payment_date] ) ) )
+Avg Days to Pay = AVERAGE(invoices[days_to_pay])
 ```
 
-## 4. Riportoldalak
+## Ellenőrzés az SQL-eredményekkel
 
-**1. Áttekintés**
-- KPI-kártyák: `Revenue`, `Revenue YoY %`, `Gross Margin %`, `Orders`, `Average Order Value`
-- Vonaldiagram: `Revenue` és `Revenue PY` havonta (`Date[Hónap]`)
-- Szeletelők: `Date[Év]`, `customers[segment]`, `customers[region]`
-
-**2. Vevők és termékek**
-- Sávdiagram: `Revenue` és `Gross Margin %` kategóriánként
-- Táblázat: top 10 vevő `Revenue` szerint
-- Fatérkép: árbevétel szegmens és régió szerint
-
-**3. Logisztika és pénzügy (order-to-cash)**
-- Sávdiagram: `On-Time Delivery %` régiónként, 90%-os célvonallal
-- Oszlopdiagram: `Late Payment %` és `Avg Days to Pay` szegmensenként
-- Kártya: `Open Invoices`
-
-A számok ellenőrizhetők: a mértékeknek ugyanazt kell adniuk, mint a `results/` mappában lévő SQL-eredményeknek (pl. 2025-ös árbevétel 1 363,5 millió Ft, éves változás +11,6%).
+A riport 2025-re ugyanazt adja, mint az SQL-elemzés ([`results/04_kpi_overview.csv`](../results/04_kpi_overview.csv)): **1 363,5 millió Ft árbevétel, +11,6% éves növekedés, 23,3% árrés**.
